@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StatisticList } from './StatisticList/StatisticList.styled';
 import { Section } from 'components/ui/Section';
 
@@ -19,4 +20,12 @@ export const Statistics = ({
       </StatisticList>
     </Section>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired,
 };
